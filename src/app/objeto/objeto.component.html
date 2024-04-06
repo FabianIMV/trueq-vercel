@@ -1,1 +1,42 @@
-<p>objeto works!</p>
+<form class="d-flex align-items-center justify-content-center" style="height: 100vh;">
+    <div class="card border-primary" style="max-width: 30rem;">
+        <div class="card-header">
+            <h1>Formulario de Objeto</h1>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" type="text" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion">Descripción:</label>
+                <input id="descripcion" type="text" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="categoria">Categoría:</label>
+                <input id="categoria" type="text" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="condicion">Condición:</label>
+                <select id="condicion" class="form-control" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="Nuevo">Nuevo</option>
+                    <option value="Casi nuevo">Casi nuevo</option>
+                    <option value="Usado">Usado</option>
+
+                </select>
+            </div>
+
+            <div class="form-group" style="margin: 2rem 0;">
+                <label for="imagen">Imagen:</label><br>
+                <input id="imagen" type="file" class="form-control-file" required>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary btn-block">Confirmar</button>
+        </div>
+    </div>
+</form>

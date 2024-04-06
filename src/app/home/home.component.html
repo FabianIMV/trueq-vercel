@@ -1,1 +1,9 @@
-<p>home works!</p>
+<app-navbar></app-navbar>
+<div class="d-flex align-items-start">
+  <h2 class="user-info text-sm-start text-md-center text-lg-start fs-1 fs-md-5 fs-lg-4 mt-3" style="color: rgb(0, 0, 0);">
+    Bienvenido, {{ userAttributes?.name ? userAttributes.name : 'Usuario' }}
+  </h2>
+</div>
+<div>
+  <a class="btn btn-primary ml-auto mt-3" routerLink="/objeto">Agrega objeto</a>
+</div>
