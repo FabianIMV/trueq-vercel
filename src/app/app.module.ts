@@ -23,9 +23,9 @@ import { OBJETOComponent } from './objeto/objeto.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    BrowserAnimationsModule, // Mueve BrowserAnimationsModule antes de ToastrModule
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
