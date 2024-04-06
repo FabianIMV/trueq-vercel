@@ -1,1 +1,25 @@
-<p>login works!</p>
+<form class="d-flex align-items-center justify-content-center" style="height: 100vh;">
+    <div class="card border-primary" style="max-width: 20rem;">
+        <div class="card-header">
+            <h1>
+                Iniciar sesión
+            </h1>
+        </div>
+        <div class="card-body">
+            <div class="row">   
+                Correo electronico: <input type="text" name="Usuario" [(ngModel)]="usuario">
+            </div>
+            <div class="row">
+                Contraseña: <input type="password" name="contraseña" [(ngModel)]="password">
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <button (click)="iniciar()" class="btn btn-primary btn-block mb-4">Iniciar Sesión</button>
+            </div>
+            <div class="row">
+                <a routerLink="/registro" class="btn btn-link">Registrarse</a>
+            </div>
+        </div>
+    </div>
+</form>
