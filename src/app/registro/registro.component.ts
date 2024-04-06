@@ -38,6 +38,23 @@ export class RegistroComponent {
     return /^(?=.*[a-z]).{8,}$/.test(this.password);
   }
 
+  validatePassword() {
+    // Verifica si el campo de contraseña está vacío
+    if (!this.password) {
+      this.toastr.error('Debe ingresar contraseña');
+      return false;
+    }
+
+    // Verifica si la contraseña cumple con los requisitos de la política
+    if (!this.passwordValid()) {
+      this.errorMessage = 'La contraseña no cumple con los requisitos de la política';
+      this.toastr.error(this.errorMessage, 'Error');
+      return false;
+    }
+
+    return true;
+  }
+
   async existeUsuario(email: string): Promise<boolean> {
     const userData = {
       Username: email,
@@ -86,9 +103,7 @@ export class RegistroComponent {
       return;
     }
 
-    if (!this.passwordValid()) {
-      this.errorMessage = 'La contraseña no cumple con los requisitos de la política';
-      this.toastr.error(this.errorMessage, 'Error');
+    if (!this.validatePassword()) {
       return;
     }
 
