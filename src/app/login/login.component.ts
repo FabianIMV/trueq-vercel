@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthenticationDetails, CognitoUser, CognitoUserPool } from 'amazon-cognito-identity-js';
-import { environment } from '../../environments/environment.development';
+import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
