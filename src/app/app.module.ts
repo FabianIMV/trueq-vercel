@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-import { ToastrModule } from 'ngx-toastr'; // Importa ToastrModule
+import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
@@ -23,7 +23,7 @@ import { OBJETOComponent } from './objeto/objeto.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule, // Mueve BrowserAnimationsModule antes de ToastrModule
+    BrowserAnimationsModule,
     ToastrModule.forRoot(),
     FormsModule
   ],
