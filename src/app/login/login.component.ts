@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AuthenticationDetails, CognitoUser, CognitoUserPool } from 'amazon-cognito-identity-js';
 import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
-import { createToast } from 'vercel-toast';
+import { ToastrService } from 'ngx-toastr';
 
 const poolData = {
     UserPoolId: environment.cognito.userPoolId,
@@ -21,7 +21,7 @@ export class LoginComponent {
   usuario = '';
   password = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private toastr: ToastrService) { }
 
   async login(username: string, password: string) {
     const authenticationDetails = new AuthenticationDetails({
@@ -57,7 +57,7 @@ export class LoginComponent {
 
   iniciar() {
     if (!this.usuario || !this.password) {
-      createToast('Por favor, ingresa tu usuario y contraseña para iniciar sesión.', { type: 'error' });
+      this.toastr.error('Por favor, ingresa tu usuario y contraseña para iniciar sesión.');
       return;
     }
 
@@ -68,11 +68,11 @@ export class LoginComponent {
         console.log('Inicio de sesión exitoso'); // No mostramos datos sensibles en la consola
         // Redireccionar a la página de inicio o realizar otras acciones necesarias después del inicio de sesión exitoso
         this.router.navigate(['/home']);
-        createToast('Inicio de sesión exitoso', { type: 'success' });
+        this.toastr.success('Inicio de sesión exitoso');
       })
       .catch(error => {
         console.error('Error en el inicio de sesión:', error); // Mostrar mensaje de error al usuario o realizar otras acciones necesarias en caso de error
-        createToast('Error en el inicio de sesión', { type: 'error' });
+        this.toastr.error('Error en el inicio de sesión');
       });
   }
 }
