@@ -37,7 +37,7 @@
             "styles": [
               "src/styles.css",
               "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/minty/bootstrap.min.css",
-              "node_modules/ngx-toastr/toastr.css"
+              "~ngx-toastr/toastr.css"
             ],
             "scripts": [
               "node_modules/@popperjs/core/dist/umd/popper.min.js",
