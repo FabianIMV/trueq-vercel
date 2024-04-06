@@ -1,0 +1,22 @@
+.toast {
+    border-radius: 15px !important;
+    background-color: #fff !important;
+    color: #333 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .toast-success {
+    border-left: 5px solid #28a745 !important; /* green */
+  }
+  
+  .toast-error {
+    border-left: 5px solid #dc3545 !important; /* red */
+  }
+  
+  .toast-info {
+    border-left: 5px solid #17a2b8 !important; /* blue */
+  }
+  
+  .toast-warning {
+    border-left: 5px solid #ffc107 !important; /* yellow */
+  }
