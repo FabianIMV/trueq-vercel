@@ -21,6 +21,7 @@
     "@popperjs/core": "^2.11.8",
     "amazon-cognito-identity-js": "^6.3.12",
     "bootstrap": "^5.3.3",
+    "cognito": "^0.0.1",
     "core-js": "^3.36.1",
     "ngx-toastr": "^18.0.0",
     "rxjs": "~7.8.0",
