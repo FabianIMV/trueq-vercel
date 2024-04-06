@@ -1,4 +1,3 @@
-<p>objeto works!</p>
 <form class="d-flex align-items-center justify-content-center" style="height: 100vh;">
     <div class="card border-primary" style="max-width: 30rem;">
         <div class="card-header">
@@ -36,8 +35,9 @@
                 <input id="imagen" type="file" class="form-control-file" required>
             </div>
         </div>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary btn-block">Confirmar</button>
+        <div class="card-footer d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">Confirmar</button>
+            <button type="button" class="btn btn-danger" routerLink="/home">Cancelar</button>
         </div>
     </div>
 </form>
