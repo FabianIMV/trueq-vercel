@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { FormsModule } from '@angular/forms';
-import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppRoutingModule } from './app-routing.module';
+import { ToastrModule } from 'ngx-toastr'; // Importa ToastrModule
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 import { RegistroComponent } from './registro/registro.component';
-import { NAVBARComponent } from './navbar/navbar.component';
 import { HOMEComponent } from './home/home.component';
+import { NAVBARComponent } from './navbar/navbar.component';
 import { OBJETOComponent } from './objeto/objeto.component';
 
 @NgModule({
@@ -18,8 +16,8 @@ import { OBJETOComponent } from './objeto/objeto.component';
     AppComponent,
     LoginComponent,
     RegistroComponent,
-    NAVBARComponent,
     HOMEComponent,
+    NAVBARComponent,
     OBJETOComponent
   ],
   imports: [
