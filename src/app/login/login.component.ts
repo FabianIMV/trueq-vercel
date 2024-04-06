@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { AuthenticationDetails, CognitoUser, CognitoUserPool } from 'amazon-cognito-identity-js';
-import { environment } from '../../environments/environment';
+import { environment } from '../../environments/environment.development';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 const poolData = {
     UserPoolId: environment.cognito.userPoolId,
     ClientId: environment.cognito.userPoolWebClienId,
-    Region: 'us-east-1' // Asegúrate de especificar la región correcta si es diferente
+    Region: 'us-east-2' // Asegúrate de especificar la región correcta si es diferente
 };
 
 const userPool = new CognitoUserPool(poolData);
